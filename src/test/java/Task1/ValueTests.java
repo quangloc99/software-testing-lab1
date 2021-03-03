@@ -1,0 +1,51 @@
+package Task1;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import ru.ifmo.se.s267880.softwareTesting.lab1.Task1;
+
+import java.util.Arrays;
+
+@RunWith(Parameterized.class)
+public class ValueTests {
+    @Parameterized.Parameters(name="{index}: acos({0}) = {1}")
+    public static Iterable<Object[]> data() {
+        // all values are computed with Wolfram-alpha
+        return Arrays.asList(new Object[][] {
+                {0.d, 1.5707963267948966192313216916397514420985846996875529104874722961d},
+
+                {0.177013d, 1.3928456349522194916248599765297875405288411247838939133519320284d},
+                {0.314d, 1.2513931277771908929723378968780129480817656623703777457006283964d},
+                {0.42d, 1.1373510067250106428228819037772353936510025970796365356654958162d},
+                {0.5d, 1.0471975511965977461542144610931676280657231331250352736583148641},
+                {0.69d, 0.8093072740472633909256398985468721643482832181619775852618102470d},
+                {0.99999d, 0.0044721396817879271723396663048526822600177184679156919341708364d},
+                {1.d, 0d},
+
+                {-0.177013d, 1.7487470186375737468377834067497153436683282745912119076230125638d},
+                {-0.314d, 1.8901995258126023454903054864014899361154037370047280752743161958d},
+                {-0.42d, 2.0042416468647825956397614795022674905461668022954692853094487760d},
+                {-0.5d, 2.0943951023931954923084289221863352561314462662500705473166297282d},
+                {-0.69d, 2.3322853795425298475370034847326307198488861812131282357131343452d},
+                {-0.99999d, 3.1371205139080053112903037169746502019371516809071901290407737558d},
+                {-1.d, 3.1415926535897932384626433832795028841971693993751058209749445923d},
+        });
+    }
+
+    private static final double EPS = 1e-4;
+    double x;
+    double expected;
+    public ValueTests(double x, double expected) {
+        this.x = x;
+        this.expected = expected;
+    }
+
+    @Test(timeout = 2000L)
+    public void check() {
+        assertEquals(expected, Task1.acos(x), EPS);
+    }
+}
