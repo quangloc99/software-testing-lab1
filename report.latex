@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage[a4paper, margin=1in]{geometry}
+
+%Russian-specific packages
+%--------------------------------------
+\usepackage[tuenc]{fontspec}%for lualatex case
+\usepackage[T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{indentfirst}
+% \usepackage[english,russian]{babel} 
+\setsansfont{CMU Sans Serif}%{Arial}
+\setmainfont{CMU Serif}%{Times New Roman}
+\setmonofont{CMU Typewriter Text}%{Consolas}
+
+\usepackage{tikz}
+\usepackage{minted}
+\usepackage{algoflowchart}      % <-- this is a local package, and I am the author
+\usepackage{graphicx}
+\usemintedstyle{borland}
+
+\renewcommand{\familydefault}{\rmdefault}
+\def\requiredField#1{\textcolor{red}{#1}}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+«Национальный исследовательский университет ИТМО»
+    \end{center}
+
+    \vfill
+    \begin{center}
+        
+        \textbf{\huge
+            Лабораторная работа №1 по дисциплину
+            "Тестирование программного обеспечения"
+        } \\
+        \medskip
+        № варианта 55504
+
+    \end{center}
+
+    \vfill
+
+    \begin{flushright}
+        Выполнил: Чан Куанг Лок\\
+        Группа: P33011
+    \end{flushright}
+
+    \begin{center}
+        Санкт-Петербург\\ 2021 г
+    \end{center}
+\end{titlepage}
+
+\section{Описание задания}
+\begin{enumerate}
+    \item Для указанной функции провести модульное тестирование разложения функции в степенной ряд. Выбрать достаточное тестовое покрытие.
+    \item Провести модульное тестирование указанного алгоритма. Для этого выбрать характерные точки внутри алгоритма, и для предложенных самостоятельно наборов исходных данных записать последовательность попадания в характерные точки. Сравнить последовательность попадания с эталонной.
+    \item Сформировать доменную модель для заданного текста.  Разработать тестовое покрытие для данной доменной модели
+\end{enumerate}
+
+Вариант: 55504
+\begin{enumerate}
+    \item Функция \verb!arccos(x)!
+    \item Программный модуль для сортировки массива подсчетом (http://www.cs.usfca.edu/~galles/visualization/CountingSort.html)
+    \item Описание предметной области:
+        \begin{verbatim}
+        Артур, нервничая, вошел следом и был ошеломлен, увидев развалившегося 
+        в кресле человека, положившего ноги на пульт управления и ковыряющего 
+        левой рукой в зубах правой головы. Правая голова, казалось, была всецело 
+        занята этим, но зато левая улыбалась широко и непринужденно. 
+        Количество вещей, видя которые, Артур не верил своим глазам, все росло. 
+        Его челюсть отвисла. 
+        \end{verbatim}
+\end{enumerate}
+
+\section{Выполнение}
+Ссылка на репозиторий: \verb!https://github.com/quangloc99/software-testing-lab1!
+
+\section{Вывод}
+При выпольнения лабораторной работы я ознакомился с библиотекой Junit для выполнения модульного тестирования. Я использовал некоторые базовые функции assert, а также некоторые другие функции библиотеки, такие как ограничение времени выполнения, перехват исключений и параметризованное тестирование. Библиотека предоставляет множество инструментов, но, на мой взгляд, тестирование - это непростая задача. Например, перед добавлением ограничения на время выполнения первой задачи я не осознавал, что мои функции могут работать очень долго, когда параметр близок к 1, и его нужно оптимизировать. И помимо добавления случайных тестовых примеров, мне также нужно подумать о некоторых крайних случаях. В заключение, лабораторная работа проста, но часть тестирования не так проста.
+
+
+\end{document}
+
+% listing code with:
+%    \inputminted[fontsize=\footnotesize]{lang}{realtive-or-absolute-dir}  
+
+% insert image
+%    \includegraphics[width=3cm, height=4cm]{img_path}
+% vim: wrap
+
