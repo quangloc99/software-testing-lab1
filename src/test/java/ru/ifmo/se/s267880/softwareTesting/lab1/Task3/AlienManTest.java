@@ -1,11 +1,8 @@
-package Task3;
+package ru.ifmo.se.s267880.softwareTesting.lab1.Task3;
 
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-import ru.ifmo.se.s267880.softwareTesting.lab1.Task3.AlienMan;
-import ru.ifmo.se.s267880.softwareTesting.lab1.Task3.AlienThing;
-import ru.ifmo.se.s267880.softwareTesting.lab1.Task3.Feeling;
 
 public class AlienManTest extends StdoutCapture {
     private AlienMan alienMan;

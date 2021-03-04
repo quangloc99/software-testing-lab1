@@ -1,12 +1,10 @@
-package Task1;
+package ru.ifmo.se.s267880.softwareTesting.lab1.Task1;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
-import ru.ifmo.se.s267880.softwareTesting.lab1.Task1;
 
 import java.util.Arrays;
 
@@ -46,6 +44,6 @@ public class ValueTests {
 
     @Test(timeout = 2000L)
     public void check() {
-        assertEquals(expected, Task1.acos(x), EPS);
+        assertEquals(expected, MyMath.acos(x), EPS);
     }
 }

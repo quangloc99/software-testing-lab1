@@ -1,10 +1,9 @@
-package ru.ifmo.se.s267880.softwareTesting.lab1;
+package ru.ifmo.se.s267880.softwareTesting.lab1.Task2;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Task2 {
+public class CountingSort {
     public static int[] countFrequency(List<Integer> list) {
         int limit = Collections.max(list);
         int[] freq = new int[limit + 1];

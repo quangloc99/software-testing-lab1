@@ -1,4 +1,4 @@
-package Task3;
+package ru.ifmo.se.s267880.softwareTesting.lab1.Task3;
 
 import static org.junit.Assert.*;
 import org.junit.Before;

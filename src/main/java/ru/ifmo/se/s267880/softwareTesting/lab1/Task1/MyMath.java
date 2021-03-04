@@ -1,6 +1,6 @@
-package ru.ifmo.se.s267880.softwareTesting.lab1;
+package ru.ifmo.se.s267880.softwareTesting.lab1.Task1;
 
-public class Task1 {
+public class MyMath {
     // value copied from Wolfram-alpha with command `pi/2`
     private static final double HALF_PI = 1.5707963267948966192313216916397514420985846996875529104874722961d;
     private static final double TERM_LIMIT = 1e-15;

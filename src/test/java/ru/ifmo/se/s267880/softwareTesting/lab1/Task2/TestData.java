@@ -1,7 +1,6 @@
-package Task2;
+package ru.ifmo.se.s267880.softwareTesting.lab1.Task2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class TestData {
